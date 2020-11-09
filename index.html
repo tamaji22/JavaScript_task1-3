@@ -17,6 +17,8 @@
       let tasks = ["掃除", "買い物", "散歩"];
       let res = "";
 
+      outputTaskList();
+      
       function outputTaskList() {
         for (let i = 0; i < heading.length; i++) {
           console.log(heading[i]);
@@ -26,13 +28,10 @@
         }
       }
 
-      outputTaskList();
-
       while (res !== null) {
         res = prompt("タスクを入力してください");
 
-        if (res === null) {
-        } else {
+        if (res !== null) {
           tasks.push(res);
           alert("新しいタスクを追加しました。");
           outputTaskList();
